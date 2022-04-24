@@ -10,7 +10,20 @@ namespace _01_ByteBank
     {
         static void Main(string[] args)
         {
-            new ContaCorrente();
+            ContaCorrente contaDaFernanda = new ContaCorrente();
+
+            contaDaFernanda.titular = "Fernanda";
+            contaDaFernanda.agencia = 863;
+            contaDaFernanda.numero = 863452;
+            contaDaFernanda.saldo = 100;
+
+            Console.WriteLine(contaDaFernanda.titular);
+            Console.WriteLine("Agência: " + contaDaFernanda.agencia);
+            Console.WriteLine("Número: " + contaDaFernanda.numero);
+            Console.WriteLine("Saldo: " + contaDaFernanda.saldo);
+
+            contaDaFernanda.saldo += 200;
+            Console.WriteLine("Saldo: " + contaDaFernanda.saldo);
 
             Console.ReadLine();
         }
