@@ -10,23 +10,37 @@ namespace _05_ByteBank
     {
         static void Main(string[] args)
         {
-            Cliente fernanda = new Cliente();
+            //Cliente fernanda = new Cliente();
 
-            fernanda.nome = "Fernanda";
-            fernanda.profissao = "Desenvolvedora C#";
-            fernanda.cpf = "435.786.942-20";
+            //fernanda.nome = "Fernanda";
+            //fernanda.profissao = "Desenvolvedora C#";
+            //fernanda.cpf = "435.786.942-20";
 
             ContaCorrente conta = new ContaCorrente();
 
-            conta.titular = fernanda;
+            // conta.titular = fernanda;
+            // conta.titular = new Cliente();
+
+            // conta.titular.nome = "Fernanda Silva";
+            // conta.titular.cpf = "435.786.942-20";
+            // conta.titular.profissao = "Desenvolvedora C#";
+
             conta.saldo = 500;
             conta.agencia = 563;
             conta.numero = 5634527;
 
-            conta.titular.nome = "Fernanda Silva";
+            if(conta.titular == null)
+            {
+                Console.WriteLine("Ops, a referência em conta.titular é NULL");
+            }
 
-            Console.WriteLine(fernanda.nome);
-            Console.WriteLine(conta.titular.nome);
+            // Console.WriteLine(fernanda.nome);
+            Console.WriteLine(conta.titular);
+            
+            //Console.WriteLine(conta.titular.nome);
+            //Console.WriteLine(conta.titular.cpf);
+            //Console.WriteLine(conta.titular.profissao);
+
 
             Console.ReadLine();
         }
